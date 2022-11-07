@@ -31,25 +31,46 @@ Attention distillation почему-то приводил к тому, что м
 
 По итогу лучше всего себя показали следующие два метода: KD + fp16 и KD + Temperature
 
-Финальная модель: 
+Финальная модель:
+
 @dataclasses.dataclass
+
 class StudentConfig:
+
   keyword: str = 'sheila'
+  
   batch_size: int = 128
+  
   learning_rate: float = 3e-4
+  
   weight_decay: float = 1e-5
+  
   num_epochs: int = 20
+  
   n_mels: int = 40
+  
   cnn_out_channels: int = 3
+  
   kernel_size: Tuple[int, int] = (7,20)
+  
   stride: Tuple[int, int] = (7, 12)
+  
   hidden_size: int = 30
+  
   gru_num_layers: int = 2
+  
   bidirectional: bool = False
+  
   num_classes: int = 2
+  
   sample_rate: int = 16000
+  
   device: torch.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+  
 val_loss = 5.500885360278004e-05
+
 После чего, конвертируем ее в fp16.
+
 Memory improvement: 3.7977
+
 Flops_improvement: 4.65 
