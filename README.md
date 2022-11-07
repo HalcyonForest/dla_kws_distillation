@@ -56,3 +56,7 @@ val_loss = 5.500885360278004e-05
 После чего, конвертируем ее в fp16.
 Memory improvement: 3.7977
 Flops_improvement: 4.65 
+
+![График1](output.png)
+![График2](output1.png)
+![График3](output3.png)
