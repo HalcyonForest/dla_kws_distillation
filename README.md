@@ -2,15 +2,15 @@
 KWS HW
 Что я успел попробовать за эту чудесную великолепную и прекрасную неделю выполнения домашки по kws и ничего кроме нее:
 
-Knowledge distillation + MSELoss
-Knowledge distillation + CrossEntropyLoss + Temperature
-Knowledge distillation + KL_divergence loss + Temperature
-Knowledge_distillation + Ground truth mixed loss
-KD + MSELoss + fp16
-KD + KL_loss + fp16
-Quantization
-KD + fp16_training
-Attention distillation
+1. Knowledge distillation + MSELoss
+2. Knowledge distillation + CrossEntropyLoss + Temperature
+3. Knowledge distillation + KL_divergence loss + Temperature
+4. Knowledge_distillation + Ground truth mixed loss
+5. KD + MSELoss + fp16
+6. KD + KL_loss + fp16
+7. Quantization
+8. KD + fp16_training
+9. Attention distillation
 
 Что я пробовал в плане архитектуры:
 Изначально я не трогал свёртки и страйд и менял лишь размер hidden_size и gru_num_layer. Практика показала, что уменьшать кол-во гру слоёв плохая идея, потому что какие бы я не ставил другие настройки обучение шло плохо и в лучшем случае доходило до 7–6е-5. 
